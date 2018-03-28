@@ -46,9 +46,12 @@ function pre_build {
             --with-fftw3-includedir=$PREFIX/include \
             --with-window=kaiserbessel
 
+    export C_INCLUDE_PATH=$BUILD_PREFIX/include
+
     # TODO: add tests from: https://github.com/conda-forge/nfft-feedstock/blob/afa706da1d537da38f232c12b74e7a13f06f639a/recipe/meta.yaml#L28-L34
 
-    export C_INCLUDE_PATH=$BUILD_PREFIX/include
+    ls -l $C_INCLUDE_PATH/
+    ls -l $BUILD_PREFIX/lib
 }
 
 function run_tests {
