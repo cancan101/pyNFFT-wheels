@@ -39,6 +39,7 @@ function pre_build {
     export STATIC_FFTW_DIR=$BUILD_PREFIX/lib
     export INCLUDE_FFTW_DIR=$BUILD_PREFIX/include
 
+    set -v
     echo "Build nfft"
     # From: https://github.com/conda-forge/nfft-feedstock/blob/afa706da1d537da38f232c12b74e7a13f06f639a/recipe/build.sh#L6-L11
     build_nfft NFFT/nfft 3.2.4 \
